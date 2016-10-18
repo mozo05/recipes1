@@ -1,4 +1,5 @@
 
+-
 ----------------------------------------------------------------------------------------------------------
 How to use your solution?
 
@@ -24,8 +25,8 @@ i.e http://recipes.dev/api/recipes/cuisine/asian
 http://recipes.dev/api/recipes/recipes/{recipesId}/rate/{value}'
 i.e http://recipes.dev/api/recipes/6/rate/3
 
-4)To update an existing recipe you will need to use post man, and send a patch request to http://recipes.dev/api/recipes/recipes/update/{recipesId}
-i.e http://recipes.dev/api/recipes/recipes/update/10
+4)To update an existing recipe you will need to use post man, and send a patch request to http://recipes.dev/api/recipes/update/{recipesId}
+i.e http://recipes.dev/api/recipes/update/10
 When in post man, scroll to the top select Body, from under the url, then select x-www-form-urlencoded, and proceed to fill out the form, type in the name of the key that you would like to update, and the new value next to it, when you are done press send.
 This will update the value and then send you a preview to insure this has been done correctly 
 
