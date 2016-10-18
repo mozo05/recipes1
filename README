@@ -1,0 +1,44 @@
+
+----------------------------------------------------------------------------------------------------------
+How to use your solution?
+
+My Solution works in the following way. 
+1)Fetch a recipe by id
+2)Fetch all recipes for a specific cuisine (should paginate) 
+3)Rate an existing recipe between 1 and 5
+4)Update an existing recipe
+5)Store a new recipe
+
+
+1) To fetch a solution by Id type in the link
+http://recipes.dev/api/recipes/
+followed by a number from 0-10
+i.e http://recipes.dev/api/recipes/5
+  
+2) To fetch all recipes for a specific cuisine type in the link
+http://recipes.dev/api/recipes/cuisine/
+followed by the name of the cusine 
+i.e http://recipes.dev/api/recipes/cuisine/asian 
+
+3) To rate an existing recipe between 1 and 5 you will need to use post man, and send a patch request to the following link
+http://recipes.dev/api/recipes/recipes/{recipesId}/rate/{value}'
+i.e http://recipes.dev/api/recipes/6/rate/3
+
+4)To update an existing recipe you will need to use post man, and send a patch request to http://recipes.dev/api/recipes/recipes/update/{recipesId}
+i.e http://recipes.dev/api/recipes/recipes/update/10
+When in post man, scroll to the top select Body, from under the url, then select x-www-form-urlencoded, and proceed to fill out the form, type in the name of the key that you would like to update, and the new value next to it, when you are done press send.
+This will update the value and then send you a preview to insure this has been done correctly 
+
+5) In order to store a new recipe, go on post man, and send a post request to http://recipes.dev/api/recipes/. When in post man, scroll to the top select Body, from under the url, and proceed to fill out the form, type in the name of the key that you would like to input information into, and the new value next to it, when you are done press send, and Id will be created automatically, and you will have a new recipe stored. 
+
+----------------------------------------------------------------------------------------------------------
+Your reasons for your choice of web application framework? 
+I chose Laravel as I have more experience with it than any other framework. 
+----------------------------------------------------------------------------------------------------------
+Explain how your solution would cater for different API consumers that require different recipe data e.g. a mobile app and the front-end of a website
+
+It would cater in the sense that the output would be in Json format, which is native to web api, and can be converted easily into objects for mobile apps.  
+----------------------------------------------------------------------------------------------------------
+Anything else you think is relevant to your solution
+
+I added some functionaly that sped up the development process, and ultimately the use of the api, first I added a recipes page that alows you to see everything that is in the database, and then I added a delete request that allows you to delete any recipe you no longer want or need. 
